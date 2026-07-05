@@ -1,5 +1,9 @@
 const PostsPage = () => {
-  return <h1>Posts Page</h1>;
+  return (
+    <section id="posts-container">
+      <span class="loader"></span>
+    </section>
+  );
 };
 
 export default PostsPage;

@@ -1,5 +1,7 @@
+import { aboutText } from '/data/about.js';
+
 const AboutPage = () => {
-  return <h1>About Page</h1>;
+  return <section class="about">{aboutText}</section>;
 };
 
 export default AboutPage;

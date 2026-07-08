@@ -7,7 +7,7 @@ const MainPage = () => {
       <Header />
       <main>
         <img
-          class="rounded-img"
+          className="rounded-img"
           src="./images/clann-zu.jpg"
           alt="clann zu band"
         />

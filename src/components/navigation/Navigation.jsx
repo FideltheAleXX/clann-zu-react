@@ -11,11 +11,11 @@ const Navigation = () => {
   ];
   return (
     <nav>
-      <ul class={styles.navbarNav}>
+      <ul className={styles.navbarNav}>
         {navigation.map((nav, index) => {
           return (
             <li key={index} className={styles.navItem}>
-              <NavLink class="nav-link" to={nav.link} end>
+              <NavLink className="nav-link" to={nav.link} end>
                 {nav.title}
               </NavLink>
             </li>

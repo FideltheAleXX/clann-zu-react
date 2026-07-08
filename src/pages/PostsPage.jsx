@@ -1,7 +1,7 @@
 const PostsPage = () => {
   return (
     <section id="posts-container">
-      <span class="loader"></span>
+      <span className="loader"></span>
     </section>
   );
 };

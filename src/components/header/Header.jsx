@@ -14,12 +14,12 @@ const Header = () => {
           <img src="./clann-zu-logo.png" alt="clann zu" />
         </Link>
       </div>
-      <div class={styles.heroTitle}>Clann Zú fan-site</div>
-      <div class={styles.heroAuth}>
+      <div className={styles.heroTitle}>Clann Zú fan-site</div>
+      <div className={styles.heroAuth}>
         {heroAuth.map((item, index) => (
           <div key={index}>
             <NavLink to={item.link}>
-              <button class={styles.heroBtn}>{item.title}</button>
+              <button className={styles.heroBtn}>{item.title}</button>
             </NavLink>
           </div>
         ))}

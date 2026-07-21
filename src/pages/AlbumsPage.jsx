@@ -1,5 +1,5 @@
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import { albums } from '/data/albums.js';
+import { albums } from '../data/albums.js';
 
 const AlbumsPage = () => {
   return (

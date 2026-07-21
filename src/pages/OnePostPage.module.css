@@ -1,0 +1,280 @@
+/* PostPage.module.css */
+.postCard {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.currentPage {
+  color: #333;
+}
+
+.postTitle {
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  color: #333;
+  line-height: 1.3;
+}
+
+.postMeta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.postMeta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.postImgBlock {
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.postImg {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.postImg:hover {
+  transform: scale(1.01);
+}
+
+.postContentWrapper {
+  margin: 25px 0;
+}
+
+.postContent {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.readMoreBtn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 5px 0;
+  transition: color 0.2s;
+}
+
+.readMoreBtn:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.postFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.backBtn {
+  padding: 8px 20px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.backBtn:hover {
+  background: #e9ecef;
+  border-color: #ccc;
+}
+
+.editBtn {
+  padding: 8px 20px;
+  background: #28a745;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.editBtn:hover {
+  background: #218838;
+}
+
+.deleteBtn {
+  padding: 8px 20px;
+  background: #dc3545;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.deleteBtn:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.deleteBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Состояния загрузки и ошибок */
+.loadingContainer {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loadingContainer p {
+  color: #666;
+  margin-top: 15px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorCard {
+  text-align: center;
+  padding: 50px 30px;
+}
+
+.errorCard h2 {
+  margin-bottom: 10px;
+}
+
+.errorSubtext {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.errorActions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.retryBtn {
+  padding: 8px 20px;
+  background: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.retryBtn:hover {
+  background: #0056b3;
+}
+
+.imgError {
+  color: #666;
+  padding: 20px;
+  font-size: 0.95rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .postCard {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .postTitle {
+    font-size: 1.5rem;
+  }
+
+  .postMeta {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .postFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+  }
+
+  .backBtn,
+  .editBtn,
+  .deleteBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

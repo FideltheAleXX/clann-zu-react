@@ -1,5 +1,10 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import AlbumsPage from './pages/AlbumsPage';
+import PostsPage from './pages/PostsPage';
+import AboutPage from './pages/AboutPage';
+import MediaPage from './pages/MediaPage';
 
 function App() {
   return (

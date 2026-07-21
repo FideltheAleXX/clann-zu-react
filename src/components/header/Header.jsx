@@ -1,5 +1,6 @@
-import { Link, NavLink } from 'react-router';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
+import Navbar from '../navbar/Navbar';
 
 const Header = () => {
   const heroAuth = [
@@ -15,15 +16,7 @@ const Header = () => {
         </Link>
       </div>
       <div className={styles.heroTitle}>Clann Zú fan-site</div>
-      <div className={styles.heroAuth}>
-        {heroAuth.map((item, index) => (
-          <div key={index}>
-            <NavLink to={item.link}>
-              <button className={styles.heroBtn}>{item.title}</button>
-            </NavLink>
-          </div>
-        ))}
-      </div>
+      <Navbar />
     </header>
   );
 };

@@ -1,0 +1,145 @@
+.createPostPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.createSection {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 500px;
+  flex-grow: 1;
+}
+
+.createPostTitle {
+  text-align: center;
+}
+
+.postContainer,
+.createPostImgBlock {
+  margin-bottom: 0.75rem;
+  font-size: var(--main-size);
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  font-size: var(--main-size);
+}
+
+.postArea {
+  width: 100%;
+}
+
+.createPostBtnBlock {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.createPostBtn {
+  text-align: end;
+  border: 1px solid var(--main-color);
+  background-color: #fff;
+  color: var(--main-color);
+  margin: var(--secondary-mg);
+  border-radius: var(--main-br);
+  padding: var(--main-pd) 1rem;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.createPostBtn:hover {
+  border: none;
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+/* Mobile Responsive Design */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .createSection {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .createPostTitle {
+    font-size: 1.25rem;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  .postArea {
+    min-height: 150px;
+    font-size: 16px;
+  }
+
+  .createPostBtn {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .createSection {
+    width: 95%;
+    margin: 0 auto;
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+
+  .createPostTitle {
+    font-size: 1.1rem;
+  }
+
+  .postContainer,
+  .createPostImgBlock {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  .postArea {
+    min-height: 120px;
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  .createPostBtnBlock {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .createPostBtn {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0.6rem;
+    margin: 0.5rem 0 0 0;
+  }
+}

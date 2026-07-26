@@ -1,3 +1,4 @@
+import styles from './Login.module.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
@@ -6,6 +7,7 @@ import SuccessModal from '../successModal/SuccessModal';
 const Login = () => {
   const navigate = useNavigate();
   const { login, loading, error } = useAuth();
+  const [showModal, setShowModal] = useState(false);
 
   const [formData, setFormData] = useState({
     loginIdentifier: '',
@@ -19,6 +21,7 @@ const Login = () => {
       [name]: value,
     }));
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -36,14 +39,14 @@ const Login = () => {
   };
 
   return (
-    <div id="login-form-block" className="auth-form active">
-      <div className="auth-title">Log in to your account</div>
-      <form className="loggin-form" onSubmit={handleSubmit}>
+    <div id="login-form-block" className={`${styles.authForm} ${styles.active}`}>
+      <div className={styles.authTitle}>Log in to your account</div>
+      <form className={styles.loginForm} onSubmit={handleSubmit}>
         <label htmlFor="loginIdentifier">Email or Nickname:</label>
         <input
           id="loginIdentifier"
           name="loginIdentifier"
-          className="email-input"
+          className={styles.emailInput}
           placeholder="Enter email or nickname"
           type="text"
           value={formData.loginIdentifier}
@@ -55,23 +58,16 @@ const Login = () => {
           type="password"
           id="password"
           name="password"
-          className="password-input"
+          className={styles.passwordInput}
           placeholder="Enter your password"
           value={formData.password}
           onChange={handleChange}
           required
         />
 
-        {error && (
-          <div
-            className="error-message"
-            style={{ color: 'red', marginTop: '10px' }}
-          >
-            {error}
-          </div>
-        )}
+        {error && <div className={styles.errorMessage}>{error}</div>}
 
-        <button className="submit-btn" type="submit" disabled={loading}>
+        <button className={styles.submitBtn} type="submit" disabled={loading}>
           {loading ? 'Logging in...' : 'Login'}
         </button>
       </form>

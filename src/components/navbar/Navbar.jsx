@@ -56,13 +56,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <div className="nav-logo">
+    <nav className={styles.navbar}>
+      <div className={styles.navContainer}>
+        <div className={styles.navLogo}>
           <Link to="/">MyBlog</Link>
         </div>
 
-        <div className="hero-auth">
+        <div className={styles.heroAuthWrapper}>
           {isAuthenticated ? (
             <div className={styles.heroAuth}>
               <div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import styles from './CreatePost.module.css';
 
 const API_URL = import.meta.env.VITE_POSTS_API_URL;
 
@@ -59,19 +60,16 @@ const CreatePostPage = () => {
   };
   return (
     <section className={styles.createSection}>
-      <h2 className="create-post__title">Create new post</h2>
+      <h2 className={styles.createPostTitle}>Create new post</h2>
 
       {error && (
-        <div
-          className="error-message"
-          style={{ color: 'red', marginBottom: '15px' }}
-        >
+        <div className={styles.errorMessage} style={{ color: 'red', marginBottom: '15px' }}>
           {error}
         </div>
       )}
 
       <form id="add-post-form" onSubmit={handleSubmit}>
-        <div className="post-container">
+        <div className={styles.postContainer}>
           <label htmlFor="post-title">Title:</label>
           <br />
           <input
@@ -83,7 +81,7 @@ const CreatePostPage = () => {
             disabled={loading}
           />
         </div>
-        <div className="create-post__img-block">
+        <div className={styles.createPostImgBlock}>
           <label htmlFor="post-img">Link to image (not required):</label>
           <br />
           <input
@@ -95,11 +93,11 @@ const CreatePostPage = () => {
             disabled={loading}
           />
         </div>
-        <div className="post-container">
+        <div className={styles.postContainer}>
           <label htmlFor="post-content">Content:</label>
           <br />
           <textarea
-            className="post-area"
+            className={styles.postArea}
             id="post-content"
             value={postData.content}
             onChange={handleChange}
@@ -108,8 +106,8 @@ const CreatePostPage = () => {
             disabled={loading}
           ></textarea>
         </div>
-        <div className="create-post__btn-block">
-          <button className="create-post__btn" type="submit" disabled={loading}>
+        <div className={styles.createPostBtnBlock}>
+          <button className={styles.createPostBtn} type="submit" disabled={loading}>
             {loading ? 'Publishing...' : 'Publish Post'}
           </button>
         </div>

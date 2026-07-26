@@ -1,6 +1,6 @@
 :root {
   --color-base-100: #f1f1f1;
-  --color-base-200: #dbdbdb;
+  --main-theme: #dbdbdb;
   --color-base-300: #c5c5c5;
   --color-base-content: #c5c5c5;
   --color-primary: #8c0327;
@@ -19,12 +19,26 @@
   --color-warning-content: #130600;
   --color-error: #d40014;
   --color-error-content: #ffd4d1;
-  --radius-selector: 1rem;
-  --radius-field: 0.5rem;
+  --main-size: 1rem;
+  --main-pd: 0.5rem;
+  --seconary-pd: 1rem;
+  --main-mg: 1rem;
+  --secondary-mg: 0.5rem;
+  --main-br: 0.75rem;
+  --secondary-theme: #44ebd3;
+  --main-color: #5bc5f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-family: sans-serif;
 }
 
 body {
-  margin: 0;
+  background-color: var(--main-theme);
 }
 
 #root {
@@ -36,4 +50,17 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.container {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }

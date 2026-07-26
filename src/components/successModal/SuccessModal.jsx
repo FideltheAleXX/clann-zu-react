@@ -19,14 +19,14 @@ const SuccessModal = ({ isOpen, onClose, title, message, buttonText }) => {
   };
 
   return (
-    <dialog ref={dialogRef} className="modal">
-      <div className="modal-content">
-        <div className="success-icon">
+    <dialog ref={dialogRef} className={styles.modal}>
+      <div className={styles.modalContent}>
+        <div className={styles.successIcon}>
           <span className="material-symbols-outlined">check</span>
         </div>
         <h2>{title || 'Successfully!'}</h2>
         <p>{message || 'Welcome to ...'}</p>
-        <button onClick={handleClose} className="modal-btn">
+        <button onClick={handleClose} className={styles.modalBtn}>
           {buttonText || 'OK'}
         </button>
       </div>

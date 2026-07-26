@@ -1,5 +1,6 @@
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
+import mainFoto from '../assets/clann-zu.jpg';
 
 const MainPage = () => {
   return (
@@ -7,8 +8,8 @@ const MainPage = () => {
       <Header />
       <main>
         <img
-          className="rounded-img"
-          src="./images/clann-zu.jpg"
+          className={StyleSheet.roundedImg}
+          src={mainFoto}
           alt="clann zu band"
         />
       </main>

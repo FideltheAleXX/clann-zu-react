@@ -1,0 +1,61 @@
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.active {
+  display: block;
+}
+
+.authTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emailInput,
+.passwordInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.emailInput:focus,
+.passwordInput:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 10px;
+}
+
+.submitBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submitBtn:hover {
+  background: #4338ca;
+}

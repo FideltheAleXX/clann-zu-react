@@ -15,7 +15,7 @@ const Navigation = () => {
         {navigation.map((nav, index) => {
           return (
             <li key={index} className={styles.navItem}>
-              <NavLink className="nav-link" to={nav.link} end>
+              <NavLink className={styles.navLink} to={nav.link} end>
                 {nav.title}
               </NavLink>
             </li>

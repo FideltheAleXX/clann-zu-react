@@ -1,0 +1,76 @@
+.albums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.albumTitle {
+  font-size: 1.75rem;
+}
+
+.albumCover {
+  width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: var(--main-br);
+}
+
+.albumTracklistTitle {
+  text-align: center;
+  font-size: 18px;
+}
+
+.albumTracklistList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.trackSummary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding-left: 24px;
+}
+
+.trackSummary .open {
+  display: none;
+}
+
+details[open] .trackSummary .close {
+  display: none;
+}
+
+details[open] .trackSummary .open {
+  display: inline-block;
+}
+
+.trackSummary::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.trackLyrics {
+  white-space: pre-wrap;
+  padding: 16px;
+  font-style: italic;
+  background: var(--bg-color-in);
+}
+
+details .trackLyrics {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+details[open] .trackLyrics {
+  opacity: 1;
+  transform: translateY(0);
+}

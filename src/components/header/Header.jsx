@@ -16,7 +16,7 @@ const Header = () => {
         </Link>
       </div>
       <div className={styles.heroTitle}>Clann Zú fan-site</div>
-      <Navbar />
+      <Navbar className={styles.heroAuth} />
     </header>
   );
 };

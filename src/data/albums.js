@@ -1,8 +1,12 @@
+import clannZuSt from '../assets/clann-zu-st.jpg';
+import rua from '../assets/rua.jpg';
+import blackCoats from '../assets/black-coats-and-bandages.jpg';
+
 export const albums = [
   {
     title: 'Clann Zú',
     year: '(2000)',
-    img: './images/clann-zu-st.jpg',
+    img: clannZuSt,
     tracklist: [
       {
         id: '01',
@@ -158,7 +162,7 @@ There, ah … richest people in the world. There are less than two thousand peop
   {
     title: 'Rua',
     year: '(2002)',
-    img: './images/rua.jpg',
+    img: rua,
     tracklist: [
       {
         id: '01',
@@ -542,7 +546,7 @@ You're listening to a dead man speak X8`,
   {
     title: 'Black Coats & Bandages',
     year: '(2004)',
-    img: './images/black-coats-and-bandages.jpg',
+    img: blackCoats,
     tracklist: [
       {
         id: '01',

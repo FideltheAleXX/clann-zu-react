@@ -1,7 +1,17 @@
-import { aboutText } from '../data/about.js';
-import styles from './AboutPage.module.css';
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import Navigation from '../components/navigation/Navigation';
+import About from '../components/about/About';
+
 const AboutPage = () => {
-  return <section className={styles.about}>{aboutText}</section>;
+  return (
+    <>
+      <Header />
+      <Navigation />
+      <About />
+      <Footer />
+    </>
+  );
 };
 
 export default AboutPage;

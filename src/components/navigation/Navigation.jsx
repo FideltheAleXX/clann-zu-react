@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 const Navigation = () => {
   const navigation = [
     { link: '/', title: 'Home' },
-    { link: './albums', title: 'Albums' },
-    { link: './posts', title: 'Blog' },
-    { link: './about', title: 'About' },
-    { link: './media', title: 'Media' },
+    { link: '/albums', title: 'Albums' },
+    { link: '/posts', title: 'Blog' },
+    { link: '/about', title: 'About' },
+    { link: '/media', title: 'Media' },
   ];
   return (
     <nav>

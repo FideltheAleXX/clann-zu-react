@@ -58,10 +58,6 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
-        <div className={styles.navLogo}>
-          <Link to="/">MyBlog</Link>
-        </div>
-
         <div className={styles.heroAuthWrapper}>
           {isAuthenticated ? (
             <div className={styles.heroAuth}>

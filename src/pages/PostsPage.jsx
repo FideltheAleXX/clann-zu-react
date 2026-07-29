@@ -1,86 +1,16 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import styles from './PostsPage.module.css';
-
-const API_URL = import.meta.env.VITE_POSTS_API_URL;
+import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
+import Navigation from '../components/navigation/Navigation';
+import Posts from '../components/posts/Posts';
 
 const PostsPage = () => {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    loadPosts();
-  }, []);
-
-  const loadPosts = async () => {
-    try {
-      setLoading(true);
-      setError('');
-      const response = await axios.get(API_URL);
-      setPosts(response.data);
-    } catch (error) {
-      console.error('Error loading posts:', error);
-      setError('Check server.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (loading) {
-    return <div className={styles.loading}>Loading posts...</div>;
-  }
-
-  if (error) {
-    return (
-      <div className={styles.error} style={{ color: 'red' }}>
-        {error}
-      </div>
-    );
-  }
-
-  if (posts.length === 0) {
-    return (
-      <div className={styles.empty}>
-        <p>Posts do not exist yet. Write first post!</p>
-        <Link to="/create-post">
-          <button className={styles.createFirstBtn}>Create First Post</button>
-        </Link>
-      </div>
-    );
-  }
   return (
-    <section id="posts-container">
-      <div className={styles.postsPage}>
-        <h1>All Posts</h1>
-        <div className={styles.postsContainer}>
-          {posts.map((post) => (
-            <article key={post.id} className={styles.postCard}>
-              <Link to={`/post/${post.id}`} className={styles.postTitle}>
-                <h2>{post.title}</h2>
-              </Link>
-              <small className={styles.postMeta}>
-                Author: {post.author} | Date:{' '}
-                {new Date(post.created_at).toLocaleDateString()}
-              </small>
-              <hr />
-              {post.img && (
-                <div className={styles.postImgBlock}>
-                  <img
-                    src={post.img}
-                    alt={post.title}
-                    className={styles.postImg}
-                    loading="lazy"
-                  />
-                </div>
-              )}
-              <p className={styles.postContent}>{post.content}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
+    <>
+      <Header />
+      <Navigation />
+      <Posts />
+      <Footer />
+    </>
   );
 };
 

@@ -10,7 +10,12 @@ const MainPage = () => {
       <Header />
       <Navigation />
       <main>
-        <img className={styles.roundedImg} src={mainFoto} alt="clann zu band" />
+        <img
+          className={styles.roundedImg}
+          src={mainFoto}
+          alt="clann zu band"
+          loading="eager"
+        />
       </main>
       <Footer />
     </div>

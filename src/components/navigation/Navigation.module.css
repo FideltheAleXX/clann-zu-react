@@ -7,3 +7,16 @@
   font-weight: 700;
   margin-bottom: var(--main-mg);
 }
+
+.navLink {
+  color: var(--color-font);
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: var(--main-br);
+}
+
+.navLink:hover {
+  text-decoration: underline;
+  background-color: var(--color-sec);
+  color: var(--color-sec-con);
+}

@@ -13,3 +13,8 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+.heroBtn:hover {
+  background-color: var(--color-sc);
+  color: var(--color-sc-con);
+}

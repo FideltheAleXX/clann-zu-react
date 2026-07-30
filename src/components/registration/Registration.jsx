@@ -1,7 +1,7 @@
-import styles from './Registrtation.module.css';
+import styles from './Registration.module.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../../hooks/useAuth';
 import SuccessModal from '../successModal/SuccessModal';
 
 const Registration = () => {

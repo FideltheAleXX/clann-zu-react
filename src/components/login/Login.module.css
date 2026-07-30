@@ -1,10 +1,4 @@
-.auth-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-#auth-container {
+.authContainer {
   display: flex;
   flex-direction: column;
   width: 25rem;
@@ -15,67 +9,77 @@
   flex-grow: 1;
 }
 
-.auth-form {
-  display: none;
-}
-
-.auth-form.active {
+.authForm {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
-.auth-title {
+.authTitle {
   text-align: center;
-  font-size: 18px;
+  font-size: 24px;
 }
 
-.loggin-form {
+.loginForm {
   display: grid;
   grid-template-columns: 1fr;
-}
-
-.register-form {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.email-input,
-.password-input,
-.nickname-input {
+  padding: 20px;
+  background-color: var(--bg-color-in);
   border-radius: var(--main-br);
-  border: 1px solid var(--main-color);
+}
+
+label {
+  opacity: 0.6;
+}
+
+.registerForm {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.emailInput,
+.passwordInput,
+.nicknameInput {
+  border-radius: var(--main-br);
+  border: 1px solid #c5c5c5;
   font-size: 18px;
   padding: var(--main-pd);
-  margin: var(--main-mg);
+  margin: 4px 16px 16px 16px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition:
+    outline-color 0.2s ease-in-out,
+    outline-offset 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
 }
 
-.email-input:focus,
-.password-input:focus,
-.nickname-input:focus {
-  outline: none;
-  border-color: #eff9fe;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+.emailInput:focus,
+.passwordInput:focus,
+.nicknameInput:focus {
+  outline: 2px solid var(--color-font);
+  outline-offset: 2px;
+  border: 1px solid #000;
+  opacity: 1;
 }
 
-.submit-btn {
+.submitBtn {
   border: 1px solid var(--main-color);
-  background-color: #fff;
-  color: var(--main-color);
-  margin: var(--secondary-mg);
+  margin: var(--main-mg);
   border-radius: var(--main-br);
   padding: var(--main-pd);
   font-size: 18px;
   font-weight: 600;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  background-color: var(--color-sec);
+  color: var(--color-sec-con);
 }
 
-.submit-btn:hover {
-  border: none;
-  color: #fff;
-  background-color: var(--main-color);
+.submitBtn:hover {
+  background-color: var(--color-sc);
+  color: var(--color-sc-con);
 }
 
 /* Modal Window */
@@ -96,17 +100,17 @@
   backdrop-filter: blur(5px);
 }
 
-.success-icon {
+.successIcon {
   font-size: 3rem;
   color: #4caf50;
   margin-bottom: 15px;
 }
 
-.material-symbols-outlined {
+.materialSymbolsOutlined {
   font-size: 48px;
 }
 
-.modal-btn {
+.modalBtn {
   border: 1px solid var(--main-color);
   background-color: #fff;
   color: var(--main-color);

@@ -12,7 +12,7 @@ const Header = () => {
     <header className={styles.hero}>
       <div className={styles.heroLogo}>
         <Link to="/">
-          <img src="./clann-zu-logo.png" alt="clann zu" />
+          <img src="/clann-zu-logo.png" alt="clann zu" />
         </Link>
       </div>
       <div className={styles.heroTitle}>Clann Zú fan-site</div>

@@ -1,18 +1,19 @@
-import { Link } from 'react-router-dom';
 import Login from '../components/login/Login';
+import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
+import Navigation from '../components/navigation/Navigation';
 
 const LoginPage = () => {
   return (
-    <div className="auth-page">
-      <h1>Login</h1>
-      <LoginForm />
-      <p>
-        Don't have an account? <Link to="/registration">Register here</Link>
-      </p>
-    </div>
+    <>
+      <Header />
+      <Navigation />
+      <Login />
+      <Footer />
+    </>
   );
 };
 
 export default LoginPage;
 
-// <section id="auth-container"></section>
+//

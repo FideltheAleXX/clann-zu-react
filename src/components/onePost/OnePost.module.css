@@ -1,0 +1,141 @@
+.postCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+  padding: var(--seconary-pd);
+  background-color: var(--bg-color-in);
+  border-radius: var(--main-br);
+  width: 50%;
+}
+
+.postTitle {
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.postMeta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.postMeta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.postImgBlock {
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.postImg {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.postContent {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.backBtn {
+  margin-top: 1rem;
+  padding: 8px 20px;
+  background-color: var(--color-sec);
+  color: var(--color-sec-con);
+  border: none;
+  border-radius: var(--main-br);
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.backBtn:hover {
+  background-color: var(--color-sc);
+  color: var(--color-sc-con);
+}
+
+.loadingContainer {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loadingContainer p {
+  color: #666;
+  margin-top: 15px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorCard {
+  text-align: center;
+  padding: 50px 30px;
+}
+
+.errorCard h2 {
+  margin-bottom: 10px;
+}
+
+.imgError {
+  color: #666;
+  padding: 20px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .postCard {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .postTitle {
+    font-size: 1.5rem;
+  }
+
+  .postMeta {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .postFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .backBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -4,14 +4,15 @@
   --color-font: #141414;
   --color-sec: #826a5c;
   --color-sec-con: #e5e0dd;
+  --color-sc: #499380;
+  --color-sc-con: #020806;
 
   --color-secondary: #d85251;
   --color-secondary-content: #110202;
 
   --color-info: #44adbb;
   --color-info-content: #020b0d;
-  --color-success: #499380;
-  --color-success-content: #020806;
+
   --color-warning: #e97f16;
   --color-warning-content: #130600;
   --color-error: #d40014;

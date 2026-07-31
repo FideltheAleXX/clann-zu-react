@@ -8,6 +8,7 @@ import MediaPage from './pages/MediaPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import OnePostPage from './pages/OnePostPage';
+import SuccessModal from './components/successModal/SuccessModal';
 
 function App() {
   return (

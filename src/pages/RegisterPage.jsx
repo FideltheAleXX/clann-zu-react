@@ -1,5 +1,8 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Registration from '../components/registration/Registration';
+import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
+import Navigation from '../components/navigation/Navigation';
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -10,13 +13,12 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="auth-page">
-      <h1>Registration</h1>
+    <>
+      <Header />
+      <Navigation />
       <Registration onSuccess={handleRegistrationSuccess} />
-      <p>
-        Already have an account? <Link to="/login">Login here</Link>
-      </p>
-    </div>
+      <Footer />
+    </>
   );
 };
 

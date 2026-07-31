@@ -1,6 +1,7 @@
 // components/SuccessModal.jsx
 import { useEffect, useRef } from 'react';
 import styles from './SuccessModal.module.css';
+import { FaCheck } from 'react-icons/fa';
 
 const SuccessModal = ({ isOpen, onClose, title, message, buttonText }) => {
   const dialogRef = useRef(null);
@@ -22,7 +23,7 @@ const SuccessModal = ({ isOpen, onClose, title, message, buttonText }) => {
     <dialog ref={dialogRef} className={styles.modal}>
       <div className={styles.modalContent}>
         <div className={styles.successIcon}>
-          <span className="material-symbols-outlined">check</span>
+          <FaCheck size={36} />
         </div>
         <h2>{title || 'Successfully!'}</h2>
         <p>{message || 'Welcome to ...'}</p>

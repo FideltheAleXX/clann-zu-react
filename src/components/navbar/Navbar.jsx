@@ -7,11 +7,9 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  // Проверка авторизации при загрузке и при изменении localStorage
   useEffect(() => {
     checkAuth();
 
-    // Слушаем изменения в localStorage (для других вкладок)
     const handleStorageChange = (e) => {
       if (e.key === 'token' || e.key === 'user') {
         checkAuth();
@@ -52,7 +50,7 @@ const Navbar = () => {
 
   const heroAuth = [
     { link: '/login', title: 'Sign In' },
-    { link: '/register', title: 'Sign Up' },
+    { link: '/registration', title: 'Sign Up' },
   ];
 
   return (

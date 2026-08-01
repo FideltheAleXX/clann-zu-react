@@ -5,7 +5,7 @@ import styles from './CreatePost.module.css';
 
 const API_URL = import.meta.env.VITE_POSTS_API_URL;
 
-const CreatePostPage = () => {
+const CreatePost = () => {
   const [postData, setPostData] = useState({
     title: '',
     img: '',

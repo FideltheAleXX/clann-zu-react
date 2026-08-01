@@ -8,6 +8,7 @@ import MediaPage from './pages/MediaPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import OnePostPage from './pages/OnePostPage';
+import CreatePostPage from './pages/CreatePostPage';
 import SuccessModal from './components/successModal/SuccessModal';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="media" element={<MediaPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="registration" element={<RegisterPage />} />
+        <Route path="create-post" element={<CreatePostPage />} />
       </Routes>
     </BrowserRouter>
   );

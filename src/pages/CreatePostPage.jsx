@@ -1,4 +1,4 @@
-import CreatePost from '../components/createPost/createPost';
+import CreatePost from '../components/createPost/CreatePost';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import Navigation from '../components/navigation/Navigation';

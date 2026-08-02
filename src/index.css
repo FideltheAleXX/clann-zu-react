@@ -8,14 +8,10 @@
   --color-sc-con: #020806;
   --color-cs: #44adbb;
   --color-cs-con: #020b0d;
-
-  --color-secondary: #d85251;
-  --color-secondary-content: #110202;
-
-  --color-warning: #e97f16;
-  --color-warning-content: #130600;
+  --orange: #e97f16;
+  --orange-con: #130600;
   --color-error: #d40014;
-  --color-error-content: #ffd4d1;
+  --color-error-con: #ffd4d1;
   --main-size: 1rem;
   --main-pd: 0.5rem;
   --seconary-pd: 1rem;

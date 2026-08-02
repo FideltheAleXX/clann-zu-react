@@ -1,0 +1,51 @@
+.mediaSection {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--main-pd);
+  flex: 1 0 auto;
+}
+
+.mediaCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color-in);
+  border-radius: var(--main-br);
+  padding: var(--seconary-pd);
+  width: 240px;
+  height: 100%;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+.mediaCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.mediaLink {
+  color: var(--color-font);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.cardStars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: center;
+}
+
+.videos {
+  display: flex;
+  justify-content: space-around;
+}

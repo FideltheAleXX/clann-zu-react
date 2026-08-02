@@ -10,16 +10,6 @@
   font-weight: 500;
 }
 
-/* Mobile Responsive Design */
-
-/* 1280px */
-@media (max-width: 1280px) {
-  .album-cover {
-    width: 20rem;
-    height: 20rem;
-  }
-}
-
 /* Tablets (768px and below) */
 @media (max-width: 768px) {
   .hero {
@@ -27,49 +17,8 @@
     padding: 0.5rem;
   }
 
-  .hero-title {
+  .heroTitle {
     font-size: 1.5rem;
-  }
-
-  .hero-auth {
-    font-size: 0.9rem;
-    gap: 0.5rem;
-  }
-
-  .hero-btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .rounded-img {
-    width: 80%;
-    max-width: 300px;
-  }
-
-  .navbar-nav {
-    gap: 15px;
-    font-size: 18px;
-    flex-wrap: wrap;
-  }
-
-  /* Albums Grid */
-  .albums {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 0 1rem;
-  }
-
-  .album-title {
-    font-size: 1.5rem;
-  }
-
-  .album-cover {
-    width: 15rem;
-    height: 15rem;
-  }
-
-  .track-summary {
-    font-size: 12.5px;
   }
 }
 
@@ -80,67 +29,12 @@
     padding: 0.25rem;
   }
 
-  .hero-title {
+  .heroTitle {
     font-size: 1.2rem;
   }
 
-  .hero-logo img {
+  .heroLogo img {
     max-width: 75px;
-  }
-
-  .hero-auth {
-    font-size: 0.7rem;
-    gap: 0.25rem;
-  }
-
-  .hero-btn {
-    padding: 0.2rem 0.5rem;
-    font-size: 0.7rem;
-  }
-
-  .rounded-img {
-    width: 90%;
-    max-width: 250px;
-    padding: 0.4em;
-  }
-
-  .navbar-nav {
-    gap: 10px;
-    font-size: 16px;
-    flex-wrap: wrap;
-  }
-
-  .navbar-nav li {
-    flex: 0 1 auto;
-  }
-
-  /* Albums Grid */
-  .albums {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    padding: 0.5rem;
-  }
-
-  .album-title {
-    font-size: 1.2rem;
-  }
-
-  .album-cover {
-    width: 12rem;
-    height: 12rem;
-  }
-
-  .track-summary {
-    font-size: 0.9rem;
-  }
-
-  .album-tracklist__title {
-    font-size: 16px;
-  }
-
-  .track-lyrics {
-    padding: 12px;
-    font-size: 0.9rem;
   }
 }
 
@@ -152,18 +46,7 @@
     gap: 0.25rem;
   }
 
-  .hero-logo {
+  .heroLogo {
     display: none;
-  }
-
-  .hero-auth {
-    align-self: end;
-  }
-}
-
-/* 321px and below */
-@media (max-width: 321px) {
-  .track-summary {
-    font-size: 0.75rem;
   }
 }

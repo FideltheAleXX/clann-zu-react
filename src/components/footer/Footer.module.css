@@ -3,7 +3,29 @@
   color: #edd0d0;
   font-size: 0.75rem;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   padding: var(--main-pd);
-  margin-top: var(--main-mg);
+  width: 100%;
+  position: relative;
+}
+
+.footer > div:first-child {
+  flex: 1;
+  text-align: center;
+}
+
+.emailWrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  transition: scale ease 0.3s;
+}
+
+.emailWrapper:hover {
+  scale: 1.05;
+}
+
+.email {
+  color: #edd0d0;
 }

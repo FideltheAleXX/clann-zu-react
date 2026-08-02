@@ -1,7 +1,29 @@
+.mainSection {
+  display: flex;
+  justify-content: center;
+}
+
 .roundedImg {
   width: 60%;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   padding: 0.6em;
   margin: 1em;
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .roundedImg {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .roundedImg {
+    width: 90%;
+    max-width: 250px;
+    padding: 0.4em;
+  }
 }

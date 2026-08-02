@@ -6,10 +6,10 @@ import styles from './MainPage.module.css';
 
 const MainPage = () => {
   return (
-    <div>
+    <>
       <Header />
       <Navigation />
-      <main>
+      <main className={styles.mainSection}>
         <img
           className={styles.roundedImg}
           src={mainFoto}
@@ -18,7 +18,7 @@ const MainPage = () => {
         />
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

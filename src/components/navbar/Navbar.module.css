@@ -18,3 +18,36 @@
   background-color: var(--color-sc);
   color: var(--color-sc-con);
 }
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .heroAuth {
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .heroBtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .heroAuth {
+    font-size: 0.7rem;
+    gap: 0.25rem;
+  }
+
+  .heroBtn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobile phones (376px and below) */
+@media (max-width: 376px) {
+  .heroAuth {
+    align-self: end;
+  }
+}

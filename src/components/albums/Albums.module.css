@@ -74,3 +74,75 @@ details[open] .trackLyrics {
   opacity: 1;
   transform: translateY(0);
 }
+
+/*(1199 and below*/
+@media (max-width: 1199px) {
+  .albumCover {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .albumTitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .albums {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .albumTitle {
+    font-size: 1.5rem;
+  }
+
+  .albumCover {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .trackSummary {
+    font-size: 12.5px;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .albums {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .albumTitle {
+    font-size: 1.2rem;
+  }
+
+  .albumCover {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .trackSummary {
+    font-size: 0.9rem;
+  }
+
+  .albumTracklistTitle {
+    font-size: 16px;
+  }
+
+  .trackLyrics {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 321px and below */
+@media (max-width: 321px) {
+  .trackSummary {
+    font-size: 0.75rem;
+  }
+}

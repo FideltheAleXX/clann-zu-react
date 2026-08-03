@@ -23,6 +23,7 @@
 .loginForm {
   display: grid;
   grid-template-columns: 1fr;
+  place-items: center;
   padding: 20px;
   background-color: var(--bg-color-in);
   border-radius: var(--main-br);
@@ -33,8 +34,7 @@ label {
 }
 
 .emailInput,
-.passwordInput,
-.nicknameInput {
+.passwordInput {
   border-radius: var(--main-br);
   border: 1px solid #c5c5c5;
   font-size: 18px;
@@ -51,8 +51,7 @@ label {
 }
 
 .emailInput:focus,
-.passwordInput:focus,
-.nicknameInput:focus {
+.passwordInput:focus {
   outline: 2px solid var(--color-font);
   outline-offset: 2px;
   border: 1px solid #000;
@@ -62,6 +61,7 @@ label {
 .submitBtn {
   border: 1px solid var(--main-color);
   margin: var(--main-mg);
+  width: 100%;
   border-radius: var(--main-br);
   padding: var(--main-pd);
   font-size: 18px;
@@ -79,87 +79,57 @@ label {
 
 /* Tablets (768px and below) */
 @media (max-width: 768px) {
-  #auth-container {
+  .authContainer {
     width: 90%;
     max-width: 400px;
     font-size: 16px;
     padding: 1rem;
   }
 
-  .auth-form {
+  .authForm {
     width: 100%;
   }
 
-  .email-input,
-  .password-input,
-  .nickname-input {
+  .emailInput,
+  .passwordInput {
     font-size: 16px;
     padding: 0.75rem;
     margin: 0.75rem 0;
   }
 
-  .submit-btn,
-  .modal-btn {
+  .submitBtn {
     padding: 0.75rem 1rem;
-  }
-
-  .modal {
-    width: 90%;
-    max-width: 350px;
-    padding: 20px;
-  }
-
-  .success-icon {
-    font-size: 2.5rem;
   }
 }
 
 /* Mobile phones (480px and below) */
 @media (max-width: 480px) {
-  #auth-container {
+  .authContainer {
     width: 95%;
     max-width: 350px;
     font-size: 14px;
     padding: 0.5rem;
   }
 
-  .auth-form {
+  .authForm {
     width: 100%;
     padding: 0.75rem;
   }
 
-  .auth-title {
+  .authTitle {
     font-size: 16px;
   }
 
-  .email-input,
-  .password-input,
-  .nickname-input {
+  .emailInput,
+  .passwordInput {
     font-size: 14px;
     padding: 0.6rem;
     margin: 0.5rem 0;
   }
 
-  .submit-btn,
-  .modal-btn {
+  .submitBtn {
     font-size: 14px;
     padding: 0.6rem 0.8rem;
     transition: background-color 0.2s;
   }
-
-  .modal {
-    width: 95%;
-    max-width: 300px;
-    padding: 15px;
-  }
-
-  .success-icon {
-    font-size: 2rem;
-  }
-}
-
-.modal-btn:hover {
-  border: none;
-  color: #fff;
-  background-color: var(--main-color);
 }

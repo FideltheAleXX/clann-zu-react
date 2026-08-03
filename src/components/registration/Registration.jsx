@@ -47,7 +47,7 @@ const Registration = () => {
             <label htmlFor="email">Email:</label>
             <input
               className={styles.emailInput}
-              placeholder="email"
+              placeholder="Enter an email"
               id="email"
               type="email"
               name="email"
@@ -76,7 +76,7 @@ const Registration = () => {
               required
             />
 
-            {error && <div className={styles.error}>{error}</div>}
+            {error && <div className="error-message">{error}</div>}
             <button
               className={styles.submitBtn}
               type="submit"

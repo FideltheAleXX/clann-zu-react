@@ -33,11 +33,7 @@ const Posts = () => {
   }
 
   if (error) {
-    return (
-      <div className={styles.error} style={{ color: 'red' }}>
-        {error}
-      </div>
-    );
+    return <div className="error-message">{error}</div>;
   }
 
   if (posts.length === 0) {

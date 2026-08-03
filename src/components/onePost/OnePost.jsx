@@ -46,7 +46,7 @@ const OnePost = () => {
   if (error || !post) {
     return (
       <article className={`${styles.postCard} ${styles.errorCard}`}>
-        <h2 style={{ color: 'red' }}>{error || 'Post not found'}</h2>
+        <h2 className="error-message">{error || 'Post not found'}</h2>
         <button onClick={() => navigate('/posts')} className={styles.backBtn}>
           ← Back to all posts
         </button>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import styles from './CreatePost.module.css';
+import SuccessModal from '../successModal/SuccessModal';
 
 const API_URL = import.meta.env.VITE_POSTS_API_URL;
 
@@ -13,6 +14,7 @@ const CreatePost = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -43,9 +45,8 @@ const CreatePost = () => {
         },
       });
 
-      alert('Post published successfully!');
       setPostData({ title: '', img: '', content: '' });
-      navigate('/posts');
+      setShowModal(true);
     } catch (error) {
       console.error('Error when creating post:', error);
 
@@ -58,18 +59,17 @@ const CreatePost = () => {
       setLoading(false);
     }
   };
+  const handleModalClose = () => {
+    setShowModal(false);
+    navigate('/posts');
+  };
+
   return (
+    <>
     <section className={styles.createSection}>
       <h2 className={styles.createPostTitle}>Create new post</h2>
 
-      {error && (
-        <div
-          className={styles.errorMessage}
-          style={{ color: 'red', marginBottom: '15px' }}
-        >
-          {error}
-        </div>
-      )}
+      {error && <div className="error-message">{error}</div>}
 
       <form id="add-post-form" onSubmit={handleSubmit}>
         <div className={styles.postContainer}>
@@ -120,6 +120,14 @@ const CreatePost = () => {
         </div>
       </form>
     </section>
+    <SuccessModal
+      isOpen={showModal}
+      onClose={handleModalClose}
+      title="Post Published!"
+      message="Your post has been published successfully."
+      buttonText="View Posts"
+    />
+    </>
   );
 };
 

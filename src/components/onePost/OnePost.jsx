@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styles from './OnePost.module.css';
+import { FaEdit } from 'react-icons/fa';
 
 const API_URL = import.meta.env.VITE_POSTS_API_URL;
 
@@ -56,7 +57,7 @@ const OnePost = () => {
   return (
     <>
       <article className={styles.postCard}>
-        <h2 className={styles.postTitle}>{post.title}</h2>
+        <h2 className={styles.postTitle}>{post.title}</h2> <FaEdit />
         <small className={styles.postMeta}>
           Author: {post.author} | Date:{' '}
           {new Date(post.created_at).toLocaleDateString()}
@@ -89,3 +90,5 @@ const OnePost = () => {
 };
 
 export default OnePost;
+
+<FaEdit />;

@@ -66,67 +66,67 @@ const CreatePost = () => {
 
   return (
     <>
-    <section className={styles.createSection}>
-      <h2 className={styles.createPostTitle}>Create new post</h2>
+      <section className={styles.createSection}>
+        <h2 className={styles.createPostTitle}>Create new post</h2>
 
-      {error && <div className="error-message">{error}</div>}
+        {error && <div className="error-message">{error}</div>}
 
-      <form id="add-post-form" onSubmit={handleSubmit}>
-        <div className={styles.postContainer}>
-          <label htmlFor="post-title">Title:</label>
-          <br />
-          <input
-            type="text"
-            id="post-title"
-            value={postData.title}
-            onChange={handleChange}
-            required
-            disabled={loading}
-          />
-        </div>
-        <div className={styles.createPostImgBlock}>
-          <label htmlFor="post-img">Link to image (not required):</label>
-          <br />
-          <input
-            type="url"
-            id="post-img"
-            value={postData.img}
-            onChange={handleChange}
-            placeholder="https://example.com/image.jpg"
-            disabled={loading}
-          />
-        </div>
-        <div className={styles.postContainer}>
-          <label htmlFor="post-content">Content:</label>
-          <br />
-          <textarea
-            className={styles.postArea}
-            id="post-content"
-            value={postData.content}
-            onChange={handleChange}
-            rows="10"
-            required
-            disabled={loading}
-          ></textarea>
-        </div>
-        <div className={styles.createPostBtnBlock}>
-          <button
-            className={styles.createPostBtn}
-            type="submit"
-            disabled={loading}
-          >
-            {loading ? 'Publishing...' : 'Publish Post'}
-          </button>
-        </div>
-      </form>
-    </section>
-    <SuccessModal
-      isOpen={showModal}
-      onClose={handleModalClose}
-      title="Post Published!"
-      message="Your post has been published successfully."
-      buttonText="View Posts"
-    />
+        <form id="add-post-form" onSubmit={handleSubmit}>
+          <div className={styles.postContainer}>
+            <label htmlFor="post-title">Title:</label>
+            <br />
+            <input
+              type="text"
+              id="post-title"
+              value={postData.title}
+              onChange={handleChange}
+              required
+              disabled={loading}
+            />
+          </div>
+          <div className={styles.createPostImgBlock}>
+            <label htmlFor="post-img">Link to image (not required):</label>
+            <br />
+            <input
+              type="url"
+              id="post-img"
+              value={postData.img}
+              onChange={handleChange}
+              placeholder="https://example.com/image.jpg"
+              disabled={loading}
+            />
+          </div>
+          <div className={styles.postContainer}>
+            <label htmlFor="post-content">Content:</label>
+            <br />
+            <textarea
+              className={styles.postArea}
+              id="post-content"
+              value={postData.content}
+              onChange={handleChange}
+              rows="10"
+              required
+              disabled={loading}
+            ></textarea>
+          </div>
+          <div className={styles.createPostBtnBlock}>
+            <button
+              className={styles.createPostBtn}
+              type="submit"
+              disabled={loading}
+            >
+              {loading ? 'Publishing...' : 'Publish Post'}
+            </button>
+          </div>
+        </form>
+      </section>
+      <SuccessModal
+        isOpen={showModal}
+        onClose={handleModalClose}
+        title="Post Published!"
+        message="Your post has been published successfully."
+        buttonText="View Posts"
+      />
     </>
   );
 };

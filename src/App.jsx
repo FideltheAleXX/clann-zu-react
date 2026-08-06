@@ -16,6 +16,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import OnePostPage from './pages/OnePostPage';
 import CreatePostPage from './pages/CreatePostPage';
+import AdminPage from './pages/AdminPage';
 import { AuthProvider, useAuth } from './hooks/useAuth';
 
 const ProtectedRoute = ({ children }) => {
@@ -57,6 +58,14 @@ const AppRoutes = () => {
                 element={
                   <ProtectedRoute>
                     <CreatePostPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="admin"
+                element={
+                  <ProtectedRoute>
+                    <AdminPage />
                   </ProtectedRoute>
                 }
               />

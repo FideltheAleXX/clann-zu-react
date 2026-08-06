@@ -57,7 +57,8 @@ const OnePost = () => {
   return (
     <>
       <article className={styles.postCard}>
-        <h2 className={styles.postTitle}>{post.title}</h2> <FaEdit />
+        <h2 className={styles.postTitle}>{post.title}</h2>{' '}
+        <FaEdit className={styles.editIcon} />
         <small className={styles.postMeta}>
           Author: {post.author} | Date:{' '}
           {new Date(post.created_at).toLocaleDateString()}

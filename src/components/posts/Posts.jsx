@@ -51,7 +51,7 @@ const Posts = () => {
     <section className={styles.postsSection}>
       {posts.map((post) => (
         <article key={post.id} className={styles.postCard}>
-          <Link to={`/post/${post.id}`} className={styles.postTitle}>
+          <Link to={`/posts/${post.id}`} className={styles.postTitle}>
             <h2>{post.title}</h2>
           </Link>
           <small className={styles.postMeta}>

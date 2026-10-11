@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import styles from './Posts.module.css';
+import defaultPostImg from '../../assets/no_image.jpg';
 
 const API_URL = import.meta.env.VITE_POSTS_API_URL;
 
@@ -62,10 +63,13 @@ const Posts = () => {
           {post.img && (
             <div className={styles.postImgBlock}>
               <img
-                src={post.img}
+                src={post.img || defaultPostImg}
                 alt={post.title}
                 className={styles.postImg}
                 loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.src = defaultPostImg;
+                }}
               />
             </div>
           )}

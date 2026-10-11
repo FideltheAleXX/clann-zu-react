@@ -4,6 +4,7 @@ import { useAuth } from '../../hooks/useAuth';
 import axios from 'axios';
 import styles from './OnePost.module.css';
 import { FaEdit } from 'react-icons/fa';
+import defaultPostImg from '../../assets/no_image.jpg';
 
 const API_URL = import.meta.env.VITE_POSTS_API_URL;
 
@@ -79,13 +80,12 @@ const OnePost = () => {
         {post.img && (
           <div className={styles.postImgBlock}>
             <img
-              src={post.img}
+              src={post.img || defaultPostImg}
               alt={post.title}
               className={styles.postImg}
               loading="lazy"
               onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.parentElement.innerHTML = `<p class="${styles.imgError}">Image not available</p>`;
+                e.currentTarget.src = defaultPostImg;
               }}
             />
           </div>

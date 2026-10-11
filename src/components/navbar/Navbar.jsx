@@ -23,6 +23,11 @@ const Navbar = () => {
           {isAuthenticated ? (
             <div className={styles.heroAuth}>
               <div>
+                <Link to="/profile">
+                  <button className={styles.heroBtn}>Profile</button>
+                </Link>
+              </div>
+              <div>
                 <Link to="/create-post">
                   <button className={styles.heroBtn}>Write post</button>
                 </Link>

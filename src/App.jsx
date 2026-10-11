@@ -19,6 +19,7 @@ import CreatePostPage from './pages/CreatePostPage';
 import AdminPage from './pages/AdminPage';
 import { AuthProvider, useAuth } from './hooks/useAuth';
 import EditPostPage from './pages/EditPostPage';
+import ProfilePage from './pages/ProfilePage';
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
@@ -54,6 +55,7 @@ const AppRoutes = () => {
               <Route path="media" element={<MediaPage />} />
               <Route path="login" element={<LoginPage />} />
               <Route path="registration" element={<RegisterPage />} />
+              <Route path="profile" element={<ProfilePage />} />
               <Route
                 path="create-post"
                 element={
